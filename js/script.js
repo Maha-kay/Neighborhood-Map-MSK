@@ -249,10 +249,11 @@ function markerWindow(marker, infowindow) {
             }, 8000);
 
         // json P method
-        $.ajax(wikiUrl, {
-            dataType: 'jsonp',
-            success: function(response) {
-                var articleList = response[1];
+		$.ajax({
+			url: wikiUrl,
+			dataType: 'jsonp'
+		}).done(function(response) {
+			var articleList = response[1];
                 for (var i = 0; i < articleList.length; i++) {
                     var articleStr = articleList[i];
                     var url =
@@ -266,10 +267,8 @@ function markerWindow(marker, infowindow) {
                         url + '" target="_blank"> Click here </a></p></div>');
                 }
 
-                clearTimeout(wikiRequestTimeout); // because if it success we need to clear timeout err message
-
-            }
-        });
+			clearTimeout(wikiRequestTimeout); // because if it success we need to clear timeout err message
+		});
 
         infowindow.open(map, marker);
 
@@ -283,7 +282,7 @@ function markerWindow(marker, infowindow) {
 // Fallback for Google Maps Api
 function mapError() {
     console.log('Error: Google maps API has not loaded');
-    $('body').prepend('<p>There was an error occured with the Google Maps. Please try again later.</p>');
+    alert('There was an error occured with the Google Maps. Please try again later.');
 }
 
 window.onload = function() {
