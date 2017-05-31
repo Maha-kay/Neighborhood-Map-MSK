@@ -8,6 +8,7 @@ var locations = [{
             lat: 24.716241,
             lng: 46.619108
         },
+        website: "http://ksu.edu.sa/en"
     },
     {
         title: "Imam Muhammad ibn Saud Islamic University",
