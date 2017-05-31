@@ -8,7 +8,7 @@ var locations = [{
             lat: 24.716241,
             lng: 46.619108
         },
-        website: "https://ksu.edu.sa/en"
+        website: "http://ksu.edu.sa/en"
     },
     {
         title: "Imam Muhammad ibn Saud Islamic University",
@@ -24,7 +24,7 @@ var locations = [{
             lat: 24.846461,
             lng: 46.724731
         },
-        website: "https://pnu.edu.sa/en"
+        website: "http://pnu.edu.sa/en"
     },
     {
         title: "Riyadh College of Technology",
